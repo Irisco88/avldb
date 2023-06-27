@@ -25,5 +25,10 @@ create-sql MigrateName:
 create-gomigrate MigrateName:
     goose -dir migrations/golang create {{MigrateName}} go
 
+# run up migrations
 up: build
     ./bin/migration --driver clickhouse --database "clickhouse://teladmin:teltonika2023@127.0.0.1:9423/default" --path "migrations/sqls" up
+
+#build docker image
+image tag:
+    docker buildx build --build-arg GITHUB_TOKEN="$GITHUB_TOKEN" --tag {{tag}} .
