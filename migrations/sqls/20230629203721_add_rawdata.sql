@@ -2,7 +2,7 @@
 -- +goose StatementBegin
 CREATE TABLE rawdatas
 (
-    timestamp DateTime64(3),
+    timestamp DateTime64(3) DEFAULT now(),
     imei      String,
     payload   String
 ) ENGINE = MergeTree()
