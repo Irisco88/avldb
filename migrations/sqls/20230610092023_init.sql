@@ -12,7 +12,7 @@ CREATE OR REPLACE TABLE avlpoints
     satellites  UInt8,
     speed       Int16,
 --     io_elements Map(UInt16, Int64),
-    io_elements Map(String, Float64),
+   io_elements Map(String, Float64),
     event_id    UInt16
 ) ENGINE = MergeTree()
       ORDER BY (timestamp);
