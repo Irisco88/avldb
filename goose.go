@@ -7,8 +7,8 @@ import (
 	"os"
 
 	_ "github.com/ClickHouse/clickhouse-go/v2"
+	_ "github.com/irisco88/avldb/migrations/golang"
 	_ "github.com/jackc/pgx/v5/stdlib"
-	_ "github.com/openfms/avldb/migrations/golang"
 	"github.com/pressly/goose/v3"
 	"github.com/urfave/cli/v2"
 	"golang.org/x/exp/slices"
@@ -95,7 +95,6 @@ func main() {
 			if err != nil {
 				return fmt.Errorf("migration: failed to open DB: %v\n", err)
 			}
-
 			defer func() {
 				if err := db.Close(); err != nil {
 					log.Fatalf("migration: failed to close DB: %v\n", err)
@@ -107,7 +106,6 @@ func main() {
 			return nil
 		},
 	}
-
 	if err := app.Run(os.Args); err != nil {
 		log.Fatal(err)
 	}
