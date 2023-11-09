@@ -7,7 +7,7 @@ require (
 	github.com/jackc/pgx/v5 v5.5.0
 	github.com/pressly/goose/v3 v3.15.1
 	github.com/urfave/cli/v2 v2.25.7
-	golang.org/x/exp v0.0.0-20231006140011-7918f672742d
+	golang.org/x/exp v0.0.0-20231108232855-2478ac86f678
 )
 
 require (
@@ -30,7 +30,7 @@ require (
 	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	go.opentelemetry.io/otel v1.19.0 // indirect
 	go.opentelemetry.io/otel/trace v1.19.0 // indirect
-	golang.org/x/crypto v0.14.0 // indirect
+	golang.org/x/crypto v0.15.0 // indirect
 	golang.org/x/sync v0.5.0 // indirect
 	golang.org/x/sys v0.14.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
