@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-CREATE OR REPLACE TABLE avlpointsData
+CREATE OR REPLACE TABLE avlpoints
 (
     imei        String,
     timestamp   DateTime64(3),
@@ -21,5 +21,5 @@ CREATE OR REPLACE TABLE avlpointsData
 
 -- +goose Down
 -- +goose StatementBegin
-DROP TABLE IF EXISTS avlpointsData
+DROP TABLE IF EXISTS avlpoints
 -- +goose StatementEnd

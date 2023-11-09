@@ -1,6 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
-CREATE OR REPLACE TABLE avlpointsData
+CREATE OR REPLACE TABLE avlpoints
 (
     imei        String,
     timestamp   DateTime64(3),
@@ -12,7 +12,7 @@ CREATE OR REPLACE TABLE avlpointsData
     satellites  UInt8,
     speed       Int16,
     io_elements Map(String, Float64),
-    io_elements_val Map(UInt16, Int64),,
+--     io_elements_val Map(UInt16, Int64),
 --    element_values Map(String, Float64),
     event_id    UInt16
 ) ENGINE = MergeTree()
@@ -22,5 +22,5 @@ CREATE OR REPLACE TABLE avlpointsData
 
 -- +goose Down
 -- +goose StatementBegin
-DROP TABLE IF EXISTS avlpointsData
+DROP TABLE IF EXISTS avlpoints
 -- +goose StatementEnd
