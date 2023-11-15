@@ -3,7 +3,7 @@
 CREATE OR REPLACE VIEW lastpoints AS
 SELECT DISTINCT ON (imei) *
 FROM avlpoints
-ORDER BY imei, timestamp DESC;
+ORDER BY imei DESC;
 -- +goose StatementEnd
 
 -- +goose Down
