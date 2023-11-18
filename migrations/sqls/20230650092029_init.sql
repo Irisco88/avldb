@@ -15,8 +15,8 @@ CREATE OR REPLACE TABLE avlpoints
 --     io_elements_val Map(UInt16, Int64),
 --    element_values Map(String, Float64),
     event_id    UInt16
-) ENGINE = MergeTree();
-  ORDER BY (imei);
+) ENGINE = MergeTree()
+      ORDER BY (timestamp);
 
 -- +goose StatementEnd
 
